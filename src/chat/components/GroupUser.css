@@ -1,0 +1,10 @@
+.GridUser{
+    display: grid;
+    grid-template-columns: 50px 1fr 60px;
+    grid-template-rows: 50px;
+    /* background-color: rgb(37, 215, 78); */
+}
+.letras{
+    font-size: 10px;
+    color: #ffffff;
+}

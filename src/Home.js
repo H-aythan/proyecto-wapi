@@ -1,19 +1,24 @@
 import React, { useState } from 'react'
 import qr from './img/QrWs.PNG'
-const Home = () => {
+const Home = ({setInfo}) => {
     const [user,setUser]=useState({nombre:"",contraseña:""});
+    
     const handleInfo=(e)=>{
         setUser({...user,[e.target.name]:e.target.value})
     }
+    const submit=(e)=>{
+        e.preventDefault();
+        setInfo(user);
+    }
     return (
         <div className="bg-black h-screen flex justify-center flex-wrap overflow-y-scroll">
-           <div style={{height:"30%",background:"#00BFA5"}} className="w-screen flex justify-center">
-               <header style={{width:"70%"}} className="text-white border- border-red-500 flex justify-between">
+           <div style={{height:"30%",background:"#00BFA5"}} className="w-screen flex justify-center ">
+               <header style={{width:"70%"}} className="text-white flex justify-between">
                     <p style={{width:"max-content"}} className="mt-8">WHATSAPP WEB</p>
-                    <form className="flex flex-col pt-8 text-black">
-                        <input value={user.nombre} name="nombre" onChange={(e)=>handleInfo(e)} className="rounded mb-5" placeholder="nombre"/>
+                    <form className="flex flex-col text-black" >
+                        <input value={user.nombre} name="nombre" onChange={(e)=>handleInfo(e)} className="rounded mb-6" placeholder="nombre"/>
                         <input value={user.contraseña} name="contraseña" onChange={(e)=>handleInfo(e)} className="rounded" placeholder="contaseña"/>
-                        <button className="text-white border mt-2">acceder</button>
+                        <button className="text-white border" onClick={(e)=>submit(e)}>acceder</button>
                     </form>
                </header>
            </div>

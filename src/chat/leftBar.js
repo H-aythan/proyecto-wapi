@@ -8,13 +8,13 @@ import iconMensaje from '../img/iconMensaje.png'
 import puntos from '../img/3puntos.png'
 import lupa from '../img/iconLupa.png'
 
-const LeftBar = () => {
+const LeftBar = ({info}) => {
     const [menu,setMenu]=useState(false);
     const [avatar,setAvatar]=useState(false)
     const [newChat,setNewChat]=useState(false)
     return (
         <aside style={{minWidth:"35%"}} className=" relative bg-gray-100 h-full flex-grow">
-            {avatar&&<PerfilPage setAvatar={setAvatar} avatarIcon={avatarIcon}/>}
+            {avatar&&<PerfilPage setAvatar={setAvatar} avatarIcon={avatarIcon} info={info}/>}
             {newChat&&<NewChat setNewChat={setNewChat} lupa={lupa}/>}
             <div className="flex border px-4 justify-between bg-gray-200 h-12" >
                 <button className="w-8 focus:outline-none" onClick={()=>setAvatar(!avatar)}>

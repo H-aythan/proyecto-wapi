@@ -3,7 +3,7 @@ import chatImg from '../img/fondoChat.jpg'
 import avatar from '../img/avatar.jpg'
 import puntos from '../img/3puntos.png'
 import lupa from '../img/iconLupa.png'
-const CajaDeMensaje = () => {
+const CajaDeMensaje = ({info}) => {
     const [menu,setMenu]=useState(false);
     
     return (
@@ -11,7 +11,7 @@ const CajaDeMensaje = () => {
             <div className="w-full h-12 bg-gray-200 border-l-2 border-gray-300 flex">
                 <div className="w-10/12 border h-full flex items-center">
                     <img src={avatar} className="w-8 h-8 rounded-full"/>
-                    <p className="text-xs ml-2">Anthony</p>
+                    <p className="text-xs ml-2">{info.nombre}</p>
                 </div>
                 <div className="border flex-grow flex items-center justify-end pr-2">
 

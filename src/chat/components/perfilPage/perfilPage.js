@@ -2,8 +2,8 @@ import{useState} from 'react'
 import lapizIcon from '../../../img/lapizIcons.png'
 
 import Seccion from './components/Seccion'
-const PerfilPage = ({setAvatar,avatarIcon}) => {
-    const [name,setName]=useState("anthony")
+const PerfilPage = ({setAvatar,avatarIcon,info}) => {
+    
     return (
         <div className="relative w-full h-full z-10 ">
             <div style={{backgroundColor:"#009688"}} className="w-full h-1/5 flex items-end px-5 pb-5 text-white">
@@ -17,7 +17,7 @@ const PerfilPage = ({setAvatar,avatarIcon}) => {
                         <p className="absolute text-center ">AÑADIR UNA FOTO DE PERFIL</p>
                     </div>
                 </div>
-                <Seccion lapizIcon={lapizIcon} title="Tu nombre" info={name}/>
+                <Seccion lapizIcon={lapizIcon} title="Tu nombre" info={info.nombre}/>
                 <p className="px-8 text-gray-500 text-sm">
                     Este no es tu nombre de usuario ni un PIN. Este nombre sera visible para tu s contactos de WhatsApp
                 </p>

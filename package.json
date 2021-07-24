@@ -2,7 +2,7 @@
   "name": "myapli",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://github.io/H-aythan/buscador-imagenes",
+  
   "dependencies": {
     "@apollo/client": "^3.3.19",
     "@craco/craco": "^6.0.0",

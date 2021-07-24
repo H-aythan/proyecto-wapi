@@ -7,19 +7,19 @@ const CajaDeMensaje = ({info}) => {
     const [menu,setMenu]=useState(false);
     
     return (
-        <div style={{background:`url(${chatImg})`,}} className="w-full h-full">
+        <div style={{background:`url(${chatImg})`,}} className="w-full h-full relative">
             <div className="w-full h-12 bg-gray-200 border-l-2 border-gray-300 flex">
                 <div className="w-10/12 border h-full flex items-center">
-                    <img src={avatar} className="w-8 h-8 rounded-full"/>
+                    <img alt="" src={avatar} className="w-8 h-8 rounded-full"/>
                     <p className="text-xs ml-2">{info.nombre}</p>
                 </div>
                 <div className="border flex-grow flex items-center justify-end pr-2">
 
                     <button className="w-5 opacity-75 focus:outline-none mr-1" >
-                        <img src={lupa} className="w-4"/>
+                        <img alt="" src={lupa} className="w-4"/>
                     </button>
                     <button className={`relative focus:outline-none w-8 h-8 rounded-full ${menu&&"bg-gray-300"} p-1`} onClick={()=>setMenu(!menu)}>
-                            <img src={puntos} className="w-5 h-5"/>
+                            <img alt="" src={puntos} className="w-5 h-5"/>
                             {menu&&
                                 <ul className="w-24 absolute bg-white -left-12 mt-2 z-10">
                                     {[1,2,3,4,5].map(items=>{
@@ -43,6 +43,12 @@ const CajaDeMensaje = ({info}) => {
                         <p className="text-xs opacity-50 flex w-16 mt-3 ml-5">10:12 p.m.</p>
                     </div>
                 </div>
+            </div>
+            <div className="bg-gray-200  w-full h-14 flex justify-between items-center absolute bottom-0">
+                <button className="border-2 border-red-200 w-14">:D</button>
+                <input type="text" className="flex-grow h-10 focus:outline-none rounded"/>
+                <button className="w-14">-></button>
+                
             </div>
         </div>
     )

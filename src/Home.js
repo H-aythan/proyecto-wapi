@@ -27,13 +27,13 @@ const Home = ({setInfo}) => {
                     <section className="flex justify-center">
                         <div className="text-lg w-7/12">
                             <h1 className="text-3xl mb-10">Para usar whatsApp en tu computadora :</h1>
-                            <p className="mb-4 ">1. Abre whatsApp en ti telefono </p>
+                            <p className="mb-4 ">1. Abre whatsApp en tu telefono </p>
                             <p className="mb-4">2. toca menu o configuracion y selecciona whatsApp Web</p>
                             <p className="mb-14">3. cuando se active la camara, apunta tu telefono a esta pantalla para scanear el codigo </p>
                             <button className="text-green-500 focus:outline-none">¿necesitas ayuda para comenzar ?</button>
                         </div>
                         <div className="w-1/4 h-1/4 flex flex-wrap justify-center" >
-                            <img src={qr}/>
+                            <img alt="" src={qr}/>
                             <label className="mt-5 opacity-50"><input type="checkbox"/>Mantener sesion activa</label>
                         </div>
                     </section>

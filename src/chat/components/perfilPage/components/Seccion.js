@@ -6,7 +6,7 @@ const Seccion = ({lapizIcon,title,info}) => {
         <p className="text-green-500 py-3">{title}</p>
         <div className="flex items-center justify-between">
             <p className="py-2">{info}</p>
-            <img className=" w-5 h-5" src={lapizIcon}/>
+            <img alt="" className=" w-5 h-5" src={lapizIcon}/>
         </div>                   
     </div>
     )
